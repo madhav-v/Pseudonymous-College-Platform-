@@ -4,7 +4,7 @@ import nodemailer from "nodemailer";
 dotenv.config();
 
 class MailService {
-  connection: any; // Adjust the type according to nodemailer.createTransport return type
+  connection: any;
   constructor() {
     this.connection = nodemailer.createTransport({
       service: "gmail",
