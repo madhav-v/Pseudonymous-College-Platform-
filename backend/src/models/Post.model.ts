@@ -16,7 +16,7 @@ export class Post {
   @PrimaryGeneratedColumn()
   id: number;
 
-  @Column()
+  @Column({ nullable: true })
   title: string;
 
   @Column()
@@ -24,6 +24,9 @@ export class Post {
 
   @ManyToOne(() => User, { eager: true })
   author: User;
+
+  @Column({ nullable: true })
+  media: string;
 
   @Column()
   createdAt: Date;
